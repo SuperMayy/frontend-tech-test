@@ -1,9 +1,21 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { fireEvent, render } from '@testing-library/react';
+// import App from './App';
+import Table from './components/Table';
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+describe("Table testing", () => {
+  test('The title of the table', () => {
+    const { getByText } = render(<Table />);
+    const linkElement = getByText("Prize List");
+    expect(linkElement).toBeInTheDocument();
+  });
+})
+
+it("Full table renders correctly", () => {
+  const {queryByTestId} = render(<Table/>);
+
+  expect(queryByTestId("table"));
+})
+
+
+

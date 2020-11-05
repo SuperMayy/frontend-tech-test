@@ -1,38 +1,356 @@
-.App {
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+  }
+
+/* Header Styling */
+.header {
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 410px;
+	background-color:#2c0077;
+}
+
+.headerTitle{
+	font-size: 48px;
+	line-height: 28px;
+	letter-spacing: -0.75px;
+	color: #ffffff;
+	margin-bottom: 30px;
+	padding-top: 48px;
+}
+
+.countDown{
+	color: #ffffff;
+	margin-bottom: 80px;
+}
+
+section.countDownCard{
+	width: 30px; 
+	height: 30px; 
+	display: inline-block; 
+	border: 3px solid white; 
+	border-radius: 6px; 
+	vertical-align: middle;
 	text-align: center;
 }
 
-.App-logo {
-	height: 40vmin;
-	pointer-events: none;
+p.number {
+	height: 18px;
+	font-size: 18px;
+    width: 5px;
+    margin-left: 8px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-	.App-logo {
-		animation: App-logo-spin infinite 20s linear;
-	}
+p.number.double {
+	margin-left: 4px;
 }
 
-.App-header {
-	background-color: #15132e;
-	min-height: 100vh;
+.headerInfo1 h5, .headerInfo2 h5 {
+	font-size: 14px;
+    color: #17dfe7;
+    margin-bottom: 3px;
+}
+.headerInfo1 h3, .headerInfo2 h3{
+	font-size: 25px;
+	line-height: 26px;
+	color: #ffffff;
+}
+.headerInfo1, .headerInfo2  {
+	margin-bottom: 22px;
+}
+
+.dateInfo{
+	color: #ffffff;
+	font-size: 14px;
+	margin-bottom: 31px;
+}
+
+.extraInfo {
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	flex-direction: row;
+}
+
+.headerInfo1 {
+	margin-right: 30px;
+}
+
+.headerContent {
+	margin-left: 68px;
+}
+
+.header-join {
+	width: 300px;
+	height: 42px;
+	border-radius: 1px;
+	background-color: #f9cb11;
+	border: none;
+	color: #0a0052;
+	font-size: 15px;
+	letter-spacing: 1.88px;
+	font-weight: 600;
+    font-stretch: condensed;
+    line-height: normal;
+}
+.close {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
+  right: 25px;
+  top: 26px;
+}
+.calender{
+	margin-right: 12px;
+	height: 18px;
+	width: 20px;
+}
+.user{
+	height: 18px;
+	width: 18px;
+}
+
+
+/* Prize Styling */
+.subheader{
+	color: #091870;
+	font-size: 28px;
+	line-height: 26px;
+}
+.prizeContent{
+	padding-top: 38px;
+	margin-left: 68px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-bottom: 18px;
+}
+.refresh{
+	margin-right: 72px;
+}
+
+hr {
+	height: 4px;
+	margin-left: 68px;
+	margin-right: 72px;
+	background-color: #f5f4fe;
+	border: none;
+}
+
+.hr1{
+	margin-top: 18px;
+	margin-bottom: 19px;
+}
+button.btnRefresh{
+	border: none;
+	background-color: #ffffff;
+}
+button.btnRefresh:hover{
+	border: none;
+	background-color: #ffffff;
+	cursor: pointer;
+}
+button.btnRefresh:active, 
+button.btnRefresh:focus {
+	border:  none;
+	color: #ffffff !important;
+	outline: none;
+}
+
+/* Table Styling */
+.hr2{
+	margin-top: 20px;
+}
+tr td {
+	border-bottom: 1px solid #f5f4fe;
+  }
+.table{
+	margin-left: 68px;
+	margin-right: 72px;
+}
+table {
+	display: block;
+	height: 192px;
+	overflow-y: scroll;
+	width: 100%;
+}
+.prizeNumber{
+	padding-right: 34px;
+}
+td.prizeName {
+    padding-right: 449px;
+}
+td {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* Table Srollbar Style*/
+/* width */
+table::-webkit-scrollbar {
+	width: 4px;
+  }
+  
+  /* Track */
+  table::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px #f5f4fe; 
+	border-radius: 2px;
+  }
+   
+  /* Handle */
+  table::-webkit-scrollbar-thumb {
+	background: #f9cb11; 
+	border-radius: 2px;
+  }
+  
+  /* Handle on hover */
+  table::-webkit-scrollbar-thumb:hover {
+	background: #bf9f1d; 
+  }
+
+/* Games and GameCard Section Styling */
+.subheader.games{
+	margin-top: 40px;
+	margin-bottom: 18px;
+}
+.games-section{
+	margin-left: 68px;
+	margin-right: 72px;
+}
+.gameCards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.gameCard{
+	/* height: 130px; */
+	margin-right: 15px;
+	margin-top: 15px;
+	width: 359px;
+	flex: 1 1 400px;
+}
+
+
+
+
+/* Description Styling */
+.terms{
+	margin-left: 68px;
+	margin-right: 72px;
+}
+.description{
+	margin-left: 68px;
+	margin-right: 72px;
+	padding-top: 45px;
+}
+.description p, .terms ul {
+    font-family: Roboto;
+	font-size: 16px;
+	font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: normal;
+	color: #000000;
+}
+.terms ul {
+    padding-left: 15px;
+}
+
+/* Footer Styling */
+
+.footer {
+	margin-top: 60px;
+	height: 150px;
+	background-image: linear-gradient(to top, #158dd4, #56169b);
+}
+.footerText{
+  padding-top: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: condensed;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #f9cb11;
+  text-align: center;
+}
+
+.icons{
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
-	color: white;
 }
 
-.App-link {
-	color: #61dafb;
+.icon{
+  width: 46px;
+  height: 46px;
+  color: #ffffff;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
+/* Terms Styling */
+h1.subheader.games {
+    margin-top: 40px;
+    margin-bottom: 22px;
+}
+
+/* Responsive Header */
+@media only screen and (max-width: 910px) {
+	.headerTitle{
+		font-size: 34px;
+		line-height: 35px;
+		letter-spacing: -0.77px;
+		height:30px;
 	}
-	to {
-		transform: rotate(360deg);
+	.headerTitle{
+		padding-top: 20px;
+	}
+	.headerContent{
+		margin-left: 20px;
+	}
+	.close {
+		right: 24px;
+		top: 20px;
+	  }
+	  .gameCard{
+		width: 300px;
+		flex: 1 1 300px;
+	}
+	.games-section{
+		margin-left: 21px;
+		margin-right: 11px;
+	}
+	.gameCards {
+		justify-content: center;
+	}
+}
+
+@media only screen and (max-width: 610px) {
+	.gameCard {
+		margin-right: 14px;
+		margin-top: 14px;
+		width: 125px;
+		flex: 1 1 125px;
+	}
+	.gameCards {
+		justify-content: center;
+	}
+	.games-section {
+		margin-right: 11px;
+	}
+	td.prizeName {
+		padding-right: 20px;
+	}
+	.prizeNumber {
+		padding-right: 14px;
 	}
 }
