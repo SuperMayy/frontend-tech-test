@@ -26,7 +26,7 @@ const Header = ({backgroundImage, title, prizePool, players, startDate}) => {
         </section> &nbsp; m &nbsp;
         <section className="countDownCard">
         <p className="number double">{seconds}</p>
-        </section>
+        </section> &nbsp; s
         </span>);
     }
   };
